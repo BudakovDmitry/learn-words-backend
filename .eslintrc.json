@@ -1,0 +1,93 @@
+{
+  "extends": ["eslint:recommended", "airbnb", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "JSX": true,
+    "NodeJS": true
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "no-shadow": "off",
+    "react/prop-types": ["off"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-confusing-arrow": "off",
+    "default-param-last": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "max-lines-per-function": "off",
+    "max-statements": "off",
+    "react/jsx-filename-extension": "off",
+    "max-len": "off",
+    "import/extensions": "off",
+    "react/self-closing-comp": "off",
+    "import/prefer-default-export": "off",
+    "camelcase": "off",
+    "spaced-comment": "off",
+    "no-plusplus": "off",
+    "no-unused-vars": "off",
+    "class-methods-use-this": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "no-use-before-define": "off",
+    "react/no-unknown-property": "off",
+    "no-unused-expressions": "off",
+    "react/destructuring-assignment": "off",
+    "prefer-spread": "off",
+    "no-unsafe-optional-chaining": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "react/no-unescaped-entities": "off",
+    "consistent-return": "off",
+    "react/require-default-props": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react", "^@?\\w"],
+          ["^.+\\.?(css)$"],
+          ["^\\u0000"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^(@|components | utils | pages | types)(/.*|$)"]
+        ]
+      }
+    ],
+
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "newline-before-return": "error",
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-var": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "unnamedComponents": "arrow-function",
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-max-props-per-line": [1, { "maximum": 1, "when": "multiline" }]
+  }
+}
