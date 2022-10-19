@@ -1,7 +1,7 @@
 {
   "name": "learn-words-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/BudakovDmitry/learn-words-backend.git",
   "author": "Budakov Dmitry <budakov.it@gmail.com>",
   "license": "MIT",
