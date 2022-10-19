@@ -2,6 +2,9 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import AppRouter from './routes/index.js'
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 
 const DB_URL =
