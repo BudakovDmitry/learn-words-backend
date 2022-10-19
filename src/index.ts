@@ -2,9 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import AppRouter from './routes/index.js'
-import dotenv from 'dotenv';
+import { config } from './config.js'
 
-dotenv.config();
 
 
 const DB_URL =
@@ -15,7 +14,6 @@ const router = new AppRouter(app)
 
 
 app.use(cors())
-app.set("port", process.env.PORT || 5000);
 app.use(express.json())
 
 router.init()
@@ -23,8 +21,7 @@ router.init()
 const startApp = async () => {
   try {
     await mongoose.connect(DB_URL);
-    const port = app.get("port");
-    app.listen(port, () => console.log('SERVER STARTED ON PORT ' + port));
+    app.listen(config.server.port, () => console.log('SERVER STARTED ON PORT ' + config.server.port));
     console.log('MongoDB Connected...');
   } catch (error) {
     console.log(error);
